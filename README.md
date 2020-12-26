@@ -119,7 +119,7 @@ ip r add 192.168.100.0/24 via 192.168.0.100
 #add wg subnet via cluster2-master-node-ip
 ip r add 192.168.99.0/24 via 192.168.0.100
 
-#add cluster2-service-cidr via cluster2-master-node-ip
+#add cluster1-service-cidr via cluster2-master-node-ip
 ip r add 10.244.0.0/16 via 192.168.0.100
 ```
 **explanation:** whenever this node needs to communicate with any ip from the subnets [192.168.100.0/24,192.168.99.0/24,10.244.0.0/16] it will forward the packets to the cluster2-master-node-ip [eth0:192.168.0.100]
